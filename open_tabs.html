@@ -3,26 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Open My Daily Tabs</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
-      padding-top: 100px;
-    }
-    button {
-      background: #ff5722;
-      color: white;
-      border: none;
-      padding: 16px 28px;
-      border-radius: 12px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #e64a19;
-    }
-  </style>
   <script>
     function openTabs() {
       const urls = [
@@ -30,13 +10,16 @@
         "https://forums.redflagdeals.com/hot-deals-f9/?st=7&sk=v&rfd_sk=v&sd=d",
         "https://ssfinc.ca/calendar"
       ];
-      urls.forEach(url => window.open(url, "_blank"));
+      urls.forEach(url => window.open(url, '_blank'));
     }
+
+    // Automatically open when the page loads
+    window.onload = openTabs;
   </script>
 </head>
 <body>
-  <h2>Launch Daily Tabs</h2>
-  <button onclick="openTabs()">🚀 Open All 3 Tabs</button>
-  <p>Tap once to open your favorite sites.</p>
+  <h2>Opening your tabs...</h2>
+  <p>If your browser blocks pop-ups, tap below to open manually:</p>
+  <button onclick="openTabs()">Open Tabs</button>
 </body>
 </html>
